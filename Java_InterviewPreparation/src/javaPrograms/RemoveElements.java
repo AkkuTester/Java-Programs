@@ -10,11 +10,7 @@ public class RemoveElements {
 	s =	s.replaceAll("[^a-zA-Z0-9]", "");
 	System.out.println(s);
 	
-	String s1 = "Auto mation Test ing";
-	
-	//s1 = s1.replaceAll("\\s", "");
-	s1 = s1.replaceAll("\\s", "");
-	System.out.println(s1);
+	// output = AutomationTesting012365
 	}
 
 }
