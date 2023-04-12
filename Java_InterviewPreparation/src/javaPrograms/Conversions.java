@@ -19,6 +19,11 @@ public class Conversions {
 		int num = Integer.valueOf(str2);
 		System.out.println(num);
 		
+		//CONVERSION OF CHARACTERS INTO THE STRING
+		char c = 'c';
+		String s = Character.toString(c);
+		System.out.println(c);
+		
 		
 	}
 
