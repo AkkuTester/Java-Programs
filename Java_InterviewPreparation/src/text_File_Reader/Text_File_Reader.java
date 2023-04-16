@@ -33,6 +33,7 @@ public class Text_File_Reader {
 		while((str = br.readLine())!=null){
 			System.out.println(str);
 		}
+		br.close();
 	}
 	
 	
