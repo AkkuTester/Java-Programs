@@ -1,0 +1,51 @@
+package str;
+
+public class Checking_Duplicate_Values_inArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	//	int arr[] = {11,22,45,89,45,96,11,2,7,3,7};
+		String arr[] = {"mango", "banana", "strwaberry", "apple", "mango"};
+		
+		if(arr.length>0) {
+			
+			int matchFound =0;
+			for(int i=0; i<arr.length; i++) {
+				for(int j=i+1; j<arr.length; j++) {
+					
+					if(arr[i] == arr[j]) {
+						matchFound ++;
+					}
+				}
+			}
+					
+//	int dupArray[] = new int [matchFound];
+	String dupArray[] = new String [matchFound];
+	int x =0;
+	
+	for(int i=0; i<arr.length; i++) {
+		for(int j=i+1; j<arr.length; j++) {
+			if(arr[i] == arr[j]) {
+				dupArray[x] = arr[j];
+				x++;
+			}
+		}
+	}
+	
+	if(matchFound>0) {
+		System.out.println( "Matching Elements Found = " + matchFound );
+		for (int i=0; i<dupArray.length; i++) {
+			System.out.println( dupArray[i] + " = Match found");
+		}
+	}else
+		System.out.println("No Matching Element Found...!!!");
+	
+		} else {
+			System.out.println("Array is Empty. Can not Evaluate");
+		}
+		
+		
+	}
+
+}
