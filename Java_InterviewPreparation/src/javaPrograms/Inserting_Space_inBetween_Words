@@ -1,0 +1,42 @@
+package str;
+
+public class Insert_Space {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String fruits = "BananaAppleCherry";
+		
+		//taking banana out from string
+	int indexOfBanana =	fruits.indexOf("Banana");
+	int indexOfApple = fruits.indexOf("Apple");
+	
+	String banana = "";
+	
+	for(int i=indexOfBanana; i<indexOfApple; i++) {
+		banana = banana + fruits.charAt(i);
+	}
+	
+	//taking apple out from the string
+	String apple = "";
+	for(int i= indexOfApple; i<fruits.indexOf("Cherry"); i++) {
+		apple = apple + fruits.charAt(i);
+	}
+	
+	//taking cherry out from the string
+	int indexOfCherry = fruits.indexOf("Cherry");
+	String cherry = "";
+	for(int i= indexOfCherry; i<fruits.length(); i++) {
+		cherry = cherry + fruits.charAt(i);
+	}
+	
+	// adding '-' between them
+  //we can add " " (space) also 
+	String result = String.join("-", banana, apple, cherry);
+	System.out.println(result);
+
+	//output - Banana-Apple-Cherry
+	
+	}
+
+}
