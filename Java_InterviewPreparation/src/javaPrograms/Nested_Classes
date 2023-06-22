@@ -1,0 +1,74 @@
+package nestedClasses;
+
+public class NestedClasses {
+	
+	public static void main(String[] args) {
+		/*
+		 * TASK -1
+		 * ACCESSING DM OF INNER CLASS 
+		 */
+		
+/*
+ * step -1
+ * Create an object of outer class
+ */
+		OuterClass outerObj = new OuterClass();
+		
+/*
+ * step -2
+ * create an object of inner class. 
+ * Syntax =
+ * OuterClass_Name.InnerClass_Name  reference_Variable	 = ObjectofOueterClass	. new InnerClass_Name();
+ */
+		
+	OuterClass.innerClass innerObj = outerObj.new innerClass();
+	
+	innerObj.lion();
+	innerObj.tiger();
+	
+	/*
+	 * TASK - 2 
+	 * ACCESSING DM OF OUTER CLASS
+	 */
+	
+	outerObj.birds();
+	outerObj.parrot();
+	}
+
+}
+
+class OuterClass {
+	
+	//dm - Outer class
+	String bName = "parrot";
+	
+	class innerClass {
+		
+		//method 1 - inner class
+		public void tiger() {
+			System.out.println("tiger is animal and lives in jungle");
+		}
+		
+		//method 2 - inner class
+		public void lion() {
+			System.out.println("lion lives in jungle and is an animal");
+		}
+	}
+	
+	//method 1 - outer class
+	
+	public void birds() {
+		System.out.println("birds lives in jungle");
+	}
+	
+	//method 2 - outer class
+	public void parrot() {
+		System.out.println(bName + " lives in jungle & is a bird");
+	}
+}
+
+//output
+//lion lives in jungle and is an animal
+//tiger is animal and lives in jungle
+//birds lives in jungle
+//parrot lives in jungle & is a bird
