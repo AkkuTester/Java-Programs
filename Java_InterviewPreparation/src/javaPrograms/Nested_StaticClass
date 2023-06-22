@@ -1,0 +1,47 @@
+package nestedClasses;
+
+/*
+ * Static Inner Class
+An inner class can also be static, which means that you can access it without creating an object of the outer class:
+ */
+
+public class Static_NestedClass {
+
+	public static void main(String[] args) {
+		
+	Second_OuterClass.Second_InnerClass 	myInner = new Second_OuterClass.Second_InnerClass();
+	
+	/*
+	 * Do note that we have not created an object of the outer class first.
+	 * we have directly created an object of inner class, as that class was static
+	 */
+	
+	System.out.println(myInner.y); //20
+	myInner.access();
+	
+	Second_OuterClass.Second_InnerClass.msg(); // no need to create an object of a class, as the method is static.
+	}
+}
+
+class Second_OuterClass {
+	
+	int x = 10;
+	
+	static class Second_InnerClass {
+		
+		int y = 20;
+		
+		public void access() {
+			System.out.println(y);
+		}
+		
+		public static void msg() {
+			System.out.println("msg sent...");
+		}
+	}
+}
+
+//Output - 
+//20 
+//20 
+//msg sent... 
