@@ -5,7 +5,6 @@ public class Removing_Duplicates {
 	// Reason to use StringBuilder / emptyString with String >> to retrieve each char in sequence as Set returns char in Random way 
 
 	public static void main(String[] args) {
-	// TODO Auto-generated method stub
 		RemoveDuplicates.usingStringBuilder();
 		RemoveDuplicates.usingNormalString();
 	}
