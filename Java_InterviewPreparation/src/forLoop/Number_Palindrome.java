@@ -1,4 +1,4 @@
-package forLoop;
+package numberPrograms;
 
 public class ForLoopDemo {
 
