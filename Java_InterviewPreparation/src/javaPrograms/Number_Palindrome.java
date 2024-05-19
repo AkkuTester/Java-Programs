@@ -1,4 +1,4 @@
-package numberPrograms;
+package javaPrograms;
 
 public class Number_Palindrome {
 
