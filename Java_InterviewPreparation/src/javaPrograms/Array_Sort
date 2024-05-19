@@ -1,0 +1,63 @@
+package javaPrograms;
+
+public class Array_Sort {
+		
+	public static void main(String[] args) {
+		  
+		Frequency_Count.array_SortAscending();
+		
+		System.out.println("\n");
+		
+		Frequency_Count.array_SortDescending();
+	}
+	
+	public static  void array_SortAscending() {
+		// Sort an array in Ascending and print 2nd largest & 2nd smallest number in array
+
+		int[] arr = {10, 20, 60, 50, 70};
+		
+		for(int i=0; i<=arr.length-1; i++) {
+			for(int j=i+1; j<=arr.length-1; j++) {
+			
+				if(arr[i] > arr[j] ) {
+					int temp = arr[j] ;
+					arr[j] = arr[i];
+					arr[i] = temp;
+				}
+			}
+		}
+		
+		for(int i : arr) {
+			System.out.print(i + "  ");
+		}
+		System.out.println("\n"+ "second Largest no : " + arr[arr.length-2]);
+		System.out.println("Second Smallest no : " + arr[1]);
+	}
+	
+	
+	public static void array_SortDescending() {
+		// Sort an array in Descending order and print 2nd largest & 2nd smallest number in array
+		
+		int[] arr = {11, 22, 66, 55, 77};
+		
+		for(int i=0; i<=arr.length-1; i++) {
+			for(int j=i+1; j<=arr.length-1; j++) {
+				
+				if(arr[i] < arr[j]) {
+					int temp = arr[j];
+					arr[j] = arr[i];
+					arr[i] = temp; 
+				}
+			}
+		}
+		
+		for(int i : arr) {
+			System.out.print(i +"  ");
+		}
+		
+		System.out.println("\n" + "second Largest no :  " + arr[1]);
+		System.out.println("Second Smallest no : " + arr[arr.length-2]);
+		
+	}
+}
+
