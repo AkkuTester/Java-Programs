@@ -1,6 +1,6 @@
 package numberPrograms;
 
-public class ForLoopDemo {
+public class Number_Palindrome {
 
 	public static void main(String[] args) {
 		// Reverse a number & check if it is palindrome
