@@ -1,9 +1,10 @@
-package tech_Round_pkg;
+package javaPrograms;
 
-public class For_Java_Class {
+public class StringManipulation_Sapient {
 	public static void main(String[] args) throws InterruptedException  
 
-// 1. what is o/p on line 11 12 13 14
+// Publicies Sapient Questions
+	// 1. what is o/p on line 11 12 13 14
 		String str1 = "user";
 		String str2 = "user";
 		String str3 = str1;
@@ -14,11 +15,35 @@ public class For_Java_Class {
 		System.out.println(str1.equals(str3));  // - true
 		System.out.println(str1 == str4);       // - false 
 
-// 2. What is o/p of line 22
+	// 2. What is o/p of line 22
 		String a = "newspaper";
 		a = a.substring(5,7);    
 		char b = a.charAt(1);    
 		a = a + b;               
 		System.out.println(a); // app
 
-// 3. i/p String I love India , o/p String I evol aidnI : Refer Reverse_Each_Word.java file
+	// 3. i/p String I love India , o/p String I evol aidnI : Refer Reverse_Each_Word.java file
+
+// Akku's Real time Scenario
+	// Replace multiple args from a string at a time		
+	        String   query = "select * from country where id = '%s' and name = '%y' ";
+	        // id = 12 , name = India 
+	        
+	        // Method 1 
+	        // Replace %y with %s for String.format compatibility
+	        query = query.replace("%y", "%s");
+	        query =   String.format(query, "12", "India");
+	        System.out.println(query);
+
+	        // Method 2
+	        String q = "select '%s' from '%s' where ranking = '%s' ";
+	        
+	        HashMap<String, String> map = new HashMap<>();
+	        map.put("State", "Maharashtra");
+	        map.put("Country", "India");
+	        map.put("Ranking", "1st");
+	        
+	        q = String.format(q, map.get("State"), map.get("Country"), map.get("Ranking") );
+	        System.out.println(q);
+	}
+}
