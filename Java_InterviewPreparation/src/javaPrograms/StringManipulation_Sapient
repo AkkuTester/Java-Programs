@@ -1,1 +1,24 @@
+package tech_Round_pkg;
 
+public class For_Java_Class {
+	public static void main(String[] args) throws InterruptedException  
+
+// 1. what is o/p on line 11 12 13 14
+		String str1 = "user";
+		String str2 = "user";
+		String str3 = str1;
+		String str4 = new String("user");
+		 
+		System.out.println(str1 == str2);       // - true
+		System.out.println(str2 == str3);       // - true
+		System.out.println(str1.equals(str3));  // - true
+		System.out.println(str1 == str4);       // - false 
+
+// 2. What is o/p of line 22
+		String a = "newspaper";
+		a = a.substring(5,7);    
+		char b = a.charAt(1);    
+		a = a + b;               
+		System.out.println(a); // app
+
+// 3. i/p String I love India , o/p String I evol aidnI : Refer Reverse_Each_Word.java file
