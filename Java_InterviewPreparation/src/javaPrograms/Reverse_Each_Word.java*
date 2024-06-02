@@ -4,7 +4,7 @@ public class Reverse_Each_Word {
 
 	public static void main(String[] args) {
 
-	For_Java_Class.reverse_String_reverseEachWord();  // cattiong function to reverse String & each word from String
+	Reverse_Each_Word.reverse_String_reverseEachWord();  // cattiong function to reverse String & each word from String
 
 		// TODO Auto-generated method stub
 		String s = "Selenium Automation";
