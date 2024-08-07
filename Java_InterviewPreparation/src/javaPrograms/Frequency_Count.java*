@@ -65,6 +65,25 @@ public class Frequency_Count {
 				}
 				
 			}
+
+		// For String array
+		
+		String s3[]  = {"Mango", "banana", "strwaberry", "apple", "mango"};
+		
+		HashMap<String, Integer> freq1 = new HashMap<String, Integer>();
+		
+		for(int i=0; i<s3.length; i++ ) {
+			
+			if(freq1.containsKey(s3[i])) {
+				freq1.put( s3[i].toLowerCase(), freq1.get(s3[i])+1 );
+			}else {
+				freq1.put(s3[i].toLowerCase(), 1);
+			}
+		}
+		
+		for(Map.Entry<String, Integer> entry :  freq1.entrySet()) {
+			
+			System.out.println(entry.getKey() + "  " + entry.getValue() );
 			
 	}
 	
