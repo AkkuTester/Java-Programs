@@ -21,3 +21,7 @@ public class ArraySort_String {
 		}
 }
 
+compare to() will return ---
+
+0: The two strings are exactly the same (they are equal).
+Less than 0: The current string comes before the other string in lexicographical (dictionary-like) order. Greater than 0: The current string comes after the other string in lexicographical order.
