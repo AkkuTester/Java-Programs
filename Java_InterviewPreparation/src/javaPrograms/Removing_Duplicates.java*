@@ -42,4 +42,20 @@ public class Removing_Duplicates {
 		System.out.println(sb);	
 	}
 
+	//Way-2
+	// without converting to charArray();
+	public static void usingStringBuilderWay2() {
+        String s = "AutomationTesting" ;
+        s = s.replace(String.valueOf(s.charAt(0)), String.valueOf(s.charAt(0)).toLowerCase());
+        System.out.println(s);
+
+        StringBuilder sb = new StringBuilder();
+        HashSet<String> set = new HashSet<>();
+
+        for(int i=0; i<s.length(); i++){
+            if(set.add(String.valueOf(s.charAt(i)))){
+                sb.append(String.valueOf(s.charAt(i)));
+            }
+        }
+        System.out.println(sb);
 }
